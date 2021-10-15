@@ -53,9 +53,9 @@ php artisan vendor:publish --provider="Greksazoo\MnbExchangeLaravel\MnbExchangeL
 
 ### Access via facade
 ```php
-use Greksazoo\MnbExchangeLaravel\Facade\MEL
+use Greksazoo\MnbExchangeLaravel\Facade\Mnb
 
-$currency = MEL::currentExchangeRate('EUR');
+$currency = Mnb::currentExchangeRate('EUR');
 ```
 
 ### Resolve by application container
@@ -67,7 +67,7 @@ You can check the feed date by passing a $date variable to some methods.
 These methods will make variable to be a Carbon instance.
 
 ```php
-MEL::exchangeRates($date);
+Mnb::exchangeRates($date);
 $date->isToday();
 ```
 
