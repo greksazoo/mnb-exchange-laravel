@@ -1,0 +1,65 @@
+{
+    "name": "greksazoo/mnb-exchange-laravel",
+    "description": "This is a MNB(Magyar Nemzeti Bank) exchange rate query package for Laravel.",
+    "keywords": [
+        "mnb-exchange-laravel",
+        "mnb",
+        "magyar",
+        "nemzeti",
+        "bank",
+        "currency",
+        "exchange",
+        "rate",
+        "laravel",
+        "package"
+    ],
+    "homepage": "https://github.com/greksazoo/mnb-exchange-laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Zoltan Greksa",
+            "email": "zoli.greksa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-simplexml": "*",
+        "ext-soap": "*",
+        "illuminate/support": "^8.0",
+        "illuminate/cache" : "^5.0|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "mockery/mockery": "1.4.*",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Greksazoo\\MnbExchangeLaravel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Greksazoo\\MnbExchangeLaravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Greksazoo\\MnbExchangeLaravel\\MnbExchangeLaravelServiceProvider"
+            ],
+            "aliases": {
+                "MnbExchangeLaravel": "Greksazoo\\MnbExchangeLaravel\\MnbExchangeLaravelFacade"
+            }
+        }
+    }
+}
