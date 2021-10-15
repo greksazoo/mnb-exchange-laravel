@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
 [![Total Downloads](https://img.shields.io/packagist/dt/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
 
-This is a Laravel v8 package.
+This is a MNB Exchange Rate query package for Laravel v8 kage.
 
 ## Requirements
 
@@ -45,7 +45,7 @@ php artisan vendor:publish --provider="Greksazoo\MnbExchangeLaravel\MnbExchangeL
          * Minutes the cached currencies will be held for.
          * Default: 24hrs (1440)
          * */
-        'minutes' => env('MNB_CACHE_MINUTES', 1440),
+        'timeout' => env('MNB_CACHE_MINUTES', 1440),
     ]
 ```
 
@@ -56,6 +56,14 @@ php artisan vendor:publish --provider="Greksazoo\MnbExchangeLaravel\MnbExchangeL
 use Greksazoo\MnbExchangeLaravel\Facade\Mnb
 
 $currency = Mnb::currentExchangeRate('EUR');
+
+echo $currency->code; // 'EUR'
+echo $currency->getCode(); // 'EUR'
+echo $currency->unit; // '1'
+echo $currency->getUnit(); // '1'
+echo $currency->amount; // '350'
+echo $currency->getAmount(); // '350'
+
 ```
 
 ### Resolve by application container

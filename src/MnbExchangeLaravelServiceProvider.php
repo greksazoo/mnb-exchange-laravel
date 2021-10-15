@@ -58,7 +58,7 @@ class MnbExchangeLaravelServiceProvider extends ServiceProvider
 	        $config = $app['config']['mnb-exchange-laravel'];
 	        $cache = $app['cache']->store($config['cache']['store']);
 	        $mnbClient = new Client($config['wsdl']);
-            return new Mnb($mnbClient, $cache, $config['cache']['minutes']);
+            return new Mnb($mnbClient, $cache, $config['cache']['timeout']);
         });
 //	    $this->app->alias(MnbExchangeLaravel::class, 'mnb.mnb-exchange-laravel');
     }

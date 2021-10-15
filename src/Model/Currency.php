@@ -8,17 +8,17 @@
 		/**
 		 * @var string
 		 */
-		protected $code;
+		public $code;
 		
 		/**
 		 * @var int
 		 */
-		protected $unit;
+		public $unit;
 		
 		/**
 		 * @var float
 		 */
-		protected $amount;
+		public $amount;
 		
 		/**
 		 * Currency constructor.
