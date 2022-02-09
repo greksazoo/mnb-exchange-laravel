@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
 [![Total Downloads](https://img.shields.io/packagist/dt/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
 
-This is a MNB Exchange Rate query package for Laravel v8 kage.
+This is a MNB Exchange Rate query package for Laravel v8 or above.
 
 ## Requirements
 
