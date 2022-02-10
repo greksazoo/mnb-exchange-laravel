@@ -1,6 +1,7 @@
 # MNB Exchange Rate package for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
+[![PHPStan](https://github.com/greksazoo/mnb-exchange-laravel/actions/workflows/phpstan.yml/badge.svg)](https://github.com/greksazoo/mnb-exchange-laravel/actions/workflows/phpstan.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/greksazoo/mnb-exchange-laravel.svg?style=flat-square)](https://packagist.org/packages/greksazoo/mnb-exchange-laravel)
 
 This is a MNB Exchange Rate query package for Laravel v8 or above.
