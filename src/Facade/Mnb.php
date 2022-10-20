@@ -9,7 +9,7 @@
 	{
 		
 		protected static function getFacadeAccessor()
-		{
+        {
 			return MnbExchangeLaravel::class;
 		}
 	}

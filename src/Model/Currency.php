@@ -8,29 +8,30 @@
 		/**
 		 * @var string
 		 */
-		public $code;
+		public string $code;
 		
 		/**
 		 * @var int
 		 */
-		public $unit;
+		public int $unit;
 		
 		/**
 		 * @var float
 		 */
-		public $amount;
+		public float $amount;
 		
 		/**
 		 * Currency constructor.
-		 * @param string $code
-		 * @param int $unit
-		 * @param float $amount
+		 *
+		 * @param  string  $code
+		 * @param  int  $unit
+		 * @param  float $amount
 		 */
-		public function __construct($code, $unit, $amount)
+		public function __construct(string $code, int $unit, float $amount)
 		{
-			$this->code = (string)$code;
-			$this->unit = (int)$unit;
-			$this->amount = (float)$amount;
+			$this->code = $code;
+			$this->unit = $unit;
+			$this->amount = $amount;
 		}
 		
 		/**

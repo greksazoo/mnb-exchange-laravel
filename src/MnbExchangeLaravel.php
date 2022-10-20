@@ -37,8 +37,8 @@
 		 *
 		 * @return void
 		 */
-		protected function normalizeDate (&$date)
-		{
+		protected function normalizeDate (&$date): void
+        {
 			$date = Carbon::createFromFormat('Y-m-d', $date);
 		}
 		
@@ -58,8 +58,8 @@
 		 *
 		 * @return bool
 		 */
-		public function hasCurrency ($code)
-		{
+		public function hasCurrency ($code): bool
+        {
 			return in_array($code, $this->currencies());
 		}
 		
@@ -91,13 +91,13 @@
 		}
 		
 		/**
-		 * @param string $code
+		 * @param  string  $code
 		 * @param mixed $date
 		 *
 		 * @return Model\Currency|null
 		 */
-		public function currentExchangeRate ($code, &$date = null)
-		{
+		public function currentExchangeRate (string $code, &$date = null): ?Model\Currency
+        {
 			$result = $this->client->currentExchangeRate($code, $date);
 			$this->normalizeDate($date);
 			
@@ -109,11 +109,25 @@
 		 *
 		 * @return array|Model\Currency[]
 		 */
-		public function currentExchangeRates (&$date = null)
-		{
+		public function currentExchangeRates (&$date = null): array
+        {
 			$result = $this->client->currentExchangeRates($date);
 			$this->normalizeDate($date);
 			
 			return $result;
 		}
+        
+        /**
+         * @param  string  $code
+         * @param mixed $date
+         *
+         * @return Model\Currency
+         */
+        public function getExchangeRateByDate (string $code,&$date): Model\Currency
+        {
+            $result = $this->client->getExchangeRateByDate($code,$date);
+            $this->normalizeDate($date);
+            
+            return $result;
+        }
 	}
