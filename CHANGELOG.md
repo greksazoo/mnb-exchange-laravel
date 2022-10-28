@@ -2,6 +2,10 @@
 
 All notable changes to `mnb-exchange-laravel` will be documented in this file
 
+## 1.1.5 - 2022-10-28
+
+- getExchangeRateByDate function response null error handling
+
 ## 1.1.4 - 2022-10-20
 
 - add getExchangeRateByDate function

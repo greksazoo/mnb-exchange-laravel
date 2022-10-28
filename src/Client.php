@@ -90,9 +90,9 @@
          * @param  Currency|string  $code
          * @param  null  $date
          *
-         * @return Currency
+         * @return Currency|null
          */
-        public function getExchangeRateByDate($code, $date): Currency
+        public function getExchangeRateByDate($code, $date): ?Currency
         {
             $param = array(
                 'startDate'     => $date,
@@ -100,8 +100,10 @@
                 'currencyNames' => $code,
             );
             $xml   = simplexml_load_string($this->client->GetExchangeRates($param)->GetExchangeRatesResult);
-            
-            return new Currency((string)$xml->Day->Rate->attributes()->curr, (int)$xml->Day->Rate->attributes()->unit, (float)str_replace(',', '.', $xml->Day->Rate));
+            if($xml->Day->Rate) {
+                return new Currency((string)$xml->Day->Rate->attributes()->curr, (int)$xml->Day->Rate->attributes()->unit, (float)str_replace(',', '.', $xml->Day->Rate));
+            }
+            return null;
         }
         
         /**
