@@ -119,9 +119,9 @@
         
         /**
          * @param  string  $code
-         * @param mixed $date
+         * @param  mixed  $date
          *
-         * @return Model\Currency|null
+         * @return \Greksazoo\MnbExchangeLaravel\Model\Currency|null
          */
         public function getExchangeRateByDate (string $code,&$date): ?Model\Currency
         {
