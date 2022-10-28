@@ -121,9 +121,9 @@
          * @param  string  $code
          * @param mixed $date
          *
-         * @return Model\Currency
+         * @return Model\Currency|null
          */
-        public function getExchangeRateByDate (string $code,&$date): Model\Currency
+        public function getExchangeRateByDate (string $code,&$date): ?Model\Currency
         {
             $result = $this->client->getExchangeRateByDate($code,$date);
             $this->normalizeDate($date);
